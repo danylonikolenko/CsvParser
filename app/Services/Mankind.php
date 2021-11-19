@@ -31,11 +31,11 @@ class Mankind
 
     }
 
-    public function getPersonAgeInDays(int $id)
+    public function getPersonAgeInDays(int $id) : int
     {
         $personBirthDate = $this->personList[$id]->getBirthDate();
 
-        return $dateDiff = date_diff(new DateTime(), new DateTime($personBirthDate))->days;
+        return date_diff(new DateTime(), new DateTime($personBirthDate))->days;
     }
 
 
