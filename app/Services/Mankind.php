@@ -12,7 +12,8 @@ class Mankind
 
     private static array $instances = [];
 
-    private array $personList;
+    /** @var PersonDto[] */
+    private array $personList = [];
 
     private int $countM = 0;
 
@@ -40,7 +41,7 @@ class Mankind
 
     public function getPersonById(int $id): array
     {
-        return $this->personList[$id] ?? [];
+        return json_decode(json_encode($this->personList[$id]), true) ?? [];
     }
 
     public function getCountM(): int

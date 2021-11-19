@@ -34,6 +34,9 @@ class PersonController
         echo "Count F : " . $this->mankind->getCountF() . " <pre>";
 
         echo "Percentage of Men : " . $this->mankind->getPercentageOfMen() . "% <pre>";
+
+        echo "Get person By id <pre>";
+        print_r($this->mankind->getPersonById(current($array)['id']));
     }
 
 
